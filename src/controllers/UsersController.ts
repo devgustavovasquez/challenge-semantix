@@ -3,6 +3,7 @@ import { handleErrorGetRequest } from "../util/errors/handle-error-get-request";
 import { getAllUsersUseCase } from "../usecases/get-all-users-usecase";
 import { getAddressesByUserUseCase } from "../usecases/get-addresses-by-user-usecase";
 import { getContactsByUserUseCase } from "../usecases/get-contacts-by-user-usecase";
+import { formatDataUsersUseCase } from "../usecases/format-data-users-usecase";
 
 export const UsersController = {
   async index(req: Request, res: Response): Promise<Response> {
@@ -26,7 +27,14 @@ export const UsersController = {
         users
       );
 
-      return res.status(200).send({ users, addresses, contacts });
+      // format all responses like UserFormated Model
+      const finalResponseUsersFormated = formatDataUsersUseCase(
+        users,
+        addresses,
+        contacts
+      );
+
+      return res.status(200).send(finalResponseUsersFormated);
     } catch (err) {
       return handleErrorGetRequest(err);
     }
