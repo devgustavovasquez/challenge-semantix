@@ -18,10 +18,10 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "rootDirs": ["./src", "./tests"],
+    "rootDirs": ["./src", "./tests", "./script"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["./src/**/*.ts", "./tests/**/*.ts"],
+  "include": ["./src/**/*.ts", "./tests/**/*.ts", "./script/**/*.ts"],
   "exclude": ["./node_modules/*", "dist"]
 }
