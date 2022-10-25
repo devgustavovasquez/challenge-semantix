@@ -1,7 +1,7 @@
-import { iContact } from "@src/models/contacts";
-import { iUser } from "@src/models/users";
-import { get } from "@src/util/axios-request";
-import { handleErrorGetRequest } from "@src/util/errors/handle-error-get-request";
+import { iContact } from "../models/contacts";
+import { iUser } from "../models/users";
+import { get } from "../util/axios-request";
+import { handleErrorGetRequest } from "../util/errors/handle-error-get-request";
 
 export type getContactsByUserResponse = Array<iContact[]>;
 

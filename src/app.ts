@@ -1,4 +1,3 @@
-import "./util/module-alias";
 import * as dotenv from "dotenv";
 import express from "express";
 import routes from "./routes/routes";

@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { handleErrorGetRequest } from "@src/util/errors/handle-error-get-request";
-import { getAllUsersUseCase } from "@src/usecases/get-all-users-usecase";
-import { getAddressesByUserUseCase } from "@src/usecases/get-addresses-by-user-usecase";
-import { getContactsByUserUseCase } from "@src/usecases/get-contacts-by-user-usecase";
+import { handleErrorGetRequest } from "../util/errors/handle-error-get-request";
+import { getAllUsersUseCase } from "../usecases/get-all-users-usecase";
+import { getAddressesByUserUseCase } from "../usecases/get-addresses-by-user-usecase";
+import { getContactsByUserUseCase } from "../usecases/get-contacts-by-user-usecase";
 
 export const UsersController = {
   async index(req: Request, res: Response): Promise<Response> {

@@ -8,8 +8,4 @@ module.exports = {
   testEnvironment: "node",
   clearMocks: true,
   preset: "ts-jest",
-  moduleNameMapper: {
-    "@src/(.*)": "<rootDir>/src/$1",
-    "@tests/(.*)": "<rootDir>/tests/$1",
-  },
 };

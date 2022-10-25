@@ -1,7 +1,7 @@
-import { iAddress } from "@src/models/addresses";
-import { iUser } from "@src/models/users";
-import { get } from "@src/util/axios-request";
-import { handleErrorGetRequest } from "@src/util/errors/handle-error-get-request";
+import { iAddress } from "../models/addresses";
+import { iUser } from "../models/users";
+import { get } from "../util/axios-request";
+import { handleErrorGetRequest } from "../util/errors/handle-error-get-request";
 
 export type getAddressesByUserResponse = Array<iAddress[]>;
 
