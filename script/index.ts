@@ -1,7 +1,7 @@
 import * as dotenv from "dotenv";
 import axios from "axios";
 import { formatDataUsers } from "./format-data-users";
-import { connect } from "./database/setup-database";
+import { connect, disconnect } from "./database/setup-database";
 import { saveUsers } from "./database/save-users";
 
 (async () => {
@@ -20,7 +20,9 @@ import { saveUsers } from "./database/save-users";
 
     const users = formatDataUsers(data);
 
-    saveUsers(users);
+    await saveUsers(users);
+
+    await disconnect();
   } catch (error) {
     throw error as unknown;
   }
