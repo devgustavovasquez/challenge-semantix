@@ -28,7 +28,7 @@ interface formatUser {
   phoneNumber: string;
 }
 
-type formatUsersResponse = Array<formatUser>;
+export type formatUsersResponse = Array<formatUser>;
 
 export const formatDataUsers = (users: rawUser[]): formatUsersResponse => {
   const response = users.map((user) => {
@@ -42,8 +42,6 @@ export const formatDataUsers = (users: rawUser[]): formatUsersResponse => {
         user.addresses[0].address.indexOf(",") + 1
       )
     );
-
-    console.log(address, addressNumber);
 
     return {
       fullName: user.fullName,
