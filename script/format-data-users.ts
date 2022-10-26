@@ -32,23 +32,25 @@ export type formatUsersResponse = Array<formatUser>;
 
 export const formatDataUsers = (users: rawUser[]): formatUsersResponse => {
   const response = users.map((user) => {
-    const address = user.addresses[0].address.substring(
-      0,
-      user.addresses[0].address.indexOf(",")
-    );
+    const address =
+      user.addresses[0]?.address.substring(
+        0,
+        user.addresses[0].address.indexOf(",")
+      ) || "";
 
-    const addressNumber = parseInt(
-      user.addresses[0].address.substring(
-        user.addresses[0].address.indexOf(",") + 1
-      )
-    );
+    const addressNumber =
+      parseInt(
+        user.addresses[0]?.address.substring(
+          user.addresses[0].address.indexOf(",") + 1
+        )
+      ) || 0;
 
     return {
       fullName: user.fullName,
       address,
       addressNumber,
       email: user.email,
-      phoneNumber: user.contacts[0].phoneNumber,
+      phoneNumber: user.contacts[0]?.phoneNumber || "0-000-000-0000",
     };
   });
 
