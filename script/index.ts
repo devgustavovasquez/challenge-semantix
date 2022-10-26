@@ -4,6 +4,8 @@ import { formatDataUsers } from "./format-data-users";
 import { connect, disconnect } from "./database/setup-database";
 import { saveUsers } from "./database/save-users";
 
+const LIMIT_USERS_QTY = 10;
+
 (async () => {
   dotenv.config();
   const apiUrl = `http://localhost:${process.env.APP_PORT}/users`;
@@ -14,7 +16,7 @@ import { saveUsers } from "./database/save-users";
 
     const { data } = await axios.get(apiUrl, {
       params: {
-        limit: 2,
+        limit: LIMIT_USERS_QTY,
       },
     });
 
