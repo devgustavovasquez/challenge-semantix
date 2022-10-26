@@ -50,7 +50,7 @@ export const formatDataUsers = (users: rawUser[]): formatUsersResponse => {
       address,
       addressNumber,
       email: user.email,
-      phoneNumber: user.contacts[0]?.phoneNumber || "0-000-000-0000",
+      phoneNumber: user.contacts[0]?.phoneNumber || "",
     };
   });
 
