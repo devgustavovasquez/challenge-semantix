@@ -79,4 +79,3 @@ $ db.users.find()
 ## Observation Points
 
 - The API response takes an average of 4 MINUTES, please wait. In case of error, it will be informed as a response to the request
-- The Script process was not ending by itself (only with SIGINT), but rest assured that both in case of error and success, the response will be logged
