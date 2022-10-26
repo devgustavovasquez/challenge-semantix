@@ -17,6 +17,10 @@ The Automation Script makes a request to the users API, formats the data receive
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
 - [Typescript](https://www.typescriptlang.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Docker](https://www.docker.com/)
+- [Axios](https://axios-http.com/)
+- [Mongoose](https://mongoosejs.com/)
 - [Jest](https://jestjs.io/)
 
 ## Running the Application
