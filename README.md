@@ -78,4 +78,4 @@ $ db.users.find()
 
 ## Observation Points
 
-- The API response takes an average of 4 MINUTES, please wait. In case of error, it will be informed as a response to the request
+- By default the API returns information about 10 users, this can be changed through the "limit" parameter
