@@ -8,7 +8,8 @@ import { formatDataUsersUseCase } from "../usecases/format-data-users-usecase";
 export const UsersController = {
   async index(req: Request, res: Response): Promise<Response> {
     try {
-      const { page = 1, limit = 100, sortBy = "id", order = "asc" } = req.query;
+      //default query params
+      const { page = 1, limit = 10, sortBy = "id", order = "asc" } = req.query;
 
       const usersQuery = `?page=${page}&limit=${limit}&sortBy=${sortBy}&order=${order}`;
 
